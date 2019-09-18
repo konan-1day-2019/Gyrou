@@ -4,13 +4,26 @@ import java.util.Random;
 public class Werewolf extends Role {
     Werewolf(String n){
         name=n;
-        ActionExplanationText="今夜、襲う対象を選択してください";
+        roleName="人狼";
+        isAlive=true;
+        ActionExplanationText="-わんわんお(^ω^U)-";
         ActionResultText="";
-        initialShakePower=50;
-        shakePower=initialShakePower;
+        actionPower=50;
+
     }
-    public  void action(Role role){
-        int randomvalue=actionDice.nextInt(100);
+    @Override
+    public  void setShakeAction(float s,Role role){
+        shakePower=s;
+        targetRole=role;
+    }
+
+    public  void action(){
+        int randomValue=actionDice.nextInt(101)-targetRole.defenseValue;
+        actionSuccess=actionPower+(int)shakePower;
+
+        if(randomValue<actionPower+shakePower){
+            targetRole.isAlive=false;
+        }
 
 
     }
