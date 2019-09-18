@@ -34,6 +34,7 @@ public class IdentificationActivity extends AppCompatActivity {
             });
         }
 
+        
         // 朝の状態
         if(state == STATE.MORNING) {
             // if()
