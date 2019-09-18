@@ -25,5 +25,6 @@ public class IdentificationActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }

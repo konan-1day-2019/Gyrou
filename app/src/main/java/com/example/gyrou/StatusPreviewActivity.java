@@ -30,6 +30,7 @@ public class StatusPreviewActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-           */
+          */
+
     }
 }
