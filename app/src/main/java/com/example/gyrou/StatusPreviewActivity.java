@@ -7,23 +7,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class IdentificationActivity extends AppCompatActivity {
+// ゲーム中の結果表示クラス
+public class StatusPreviewActivity extends AppCompatActivity {
+
+    int loopCount = 0; // プレイヤーの行動のカウント数
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_identification);
+        setContentView(R.layout.activity_status_preview);
 
-        // 本人確認のシーンに遷移
+        // 生存者の数だけ本人確認シーンへ移行する
+        // if(loopCount <= surviveList )
+        /*
         Button identificationButton = (Button)findViewById(R.id.identificationButton);
 
         identificationButton.setOnClickListener(new View.OnClickListener()
         {
             public  void onClick(View v)
             {
-                Intent intent = new Intent(IdentificationActivity.this, SelectTargetActivity.class);
+                Intent intent = new Intent(StatusPreviewActivity.this, IdentificationActivity.class);
                 startActivity(intent);
             }
         });
+           */
     }
 }
