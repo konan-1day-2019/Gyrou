@@ -11,7 +11,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
-public class SelectTargetActivity extends AppCompatActivity implements  SensorEventListener, Runnable
+public class SelectTargetActivity extends AppCompatActivity implements  SensorEventListener
 {
 
         SensorManager sensorManager;
@@ -28,7 +28,12 @@ public class SelectTargetActivity extends AppCompatActivity implements  SensorEv
 
             sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 
-        // 本人確認から対象選択画面へ移行
+            changeScene();
+    }
+
+    // 本人確認から対象選択画面へ移行
+    private void changeScene()
+    {
         Button identificationButton = (Button) findViewById(R.id.identificationButton);
 
         identificationButton.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +42,12 @@ public class SelectTargetActivity extends AppCompatActivity implements  SensorEv
                 startActivity(intent);
             }
         });
+    }
+
+    // シェイクするかしないか
+    private void selectShake()
+    {
+        //Button permitButton = (Button) findViewById(R.id.permitButton);
     }
     @Override
     protected void onResume() {
@@ -50,7 +61,6 @@ public class SelectTargetActivity extends AppCompatActivity implements  SensorEv
     @Override
     public void onSensorChanged(SensorEvent event)
     {
-
         if(event.sensor.getType() == Sensor.TYPE_GYROSCOPE)
            sumZ += event.values[1];
 
@@ -62,32 +72,6 @@ public class SelectTargetActivity extends AppCompatActivity implements  SensorEv
 
     }
 
-    @Override
-    public  void run()
-    {
-        int period = 10;
 
-        while(!stopRun)
-        {
-            try
-            {
-                Thread.sleep(period);
-            }
-            catch (InterruptedException e)
-            {
-                e.printStackTrace();
-                stopRun = true;
-            }
 
-            handler.post(new Runnable(){
-                @Override
-                public void run()
-                {
-                    long endTime = System.currentTimeMillis();
-
-                    long diffTime = (endTime - startTime);
-                }
-            });
-        }
-    }
 }
