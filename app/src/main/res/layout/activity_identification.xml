@@ -7,7 +7,7 @@
     tools:context=".IdentificationActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/identificationButton"
         android:layout_width="146dp"
         android:layout_height="85dp"
         android:layout_marginStart="162dp"
@@ -15,6 +15,7 @@
         android:layout_marginEnd="161dp"
         android:layout_marginBottom="182dp"
         android:text="対象選択へ進む"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
