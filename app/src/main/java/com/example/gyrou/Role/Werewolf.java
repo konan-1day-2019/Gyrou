@@ -1,4 +1,6 @@
 package com.example.gyrou.Role;
+import com.example.gyrou.Manager.PlayerListManager;
+
 import java.util.Random;
 
 public class Werewolf extends Role {
@@ -22,6 +24,7 @@ public class Werewolf extends Role {
 
         if(randomValue<actionPower+shakePower){
             targetRole.isAlive=false;
+            PlayerListManager.deadRoleName.add(targetRole.name);
         }
 
 
