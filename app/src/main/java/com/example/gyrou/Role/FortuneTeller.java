@@ -1,10 +1,9 @@
 package com.example.gyrou.Role;
 
 public class FortuneTeller extends Role {
-    FortuneTeller(String n){
-        name=n;
+    public FortuneTeller(){
+
         roleName="占い師";
-        isAlive=true;
         ActionExplanationText="-私が黒と言えば、黒なるのだ-";
         ActionResultText="";
         actionPower=70;

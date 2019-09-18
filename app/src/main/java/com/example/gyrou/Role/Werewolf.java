@@ -2,10 +2,9 @@ package com.example.gyrou.Role;
 import java.util.Random;
 
 public class Werewolf extends Role {
-    Werewolf(String n){
-        name=n;
+   public Werewolf(){
+
         roleName="人狼";
-        isAlive=true;
         ActionExplanationText="-わんわんお(^ω^U)-";
         ActionResultText="";
         actionPower=50;
