@@ -87,7 +87,7 @@ public class SelectTargetActivity extends AppCompatActivity implements  SensorEv
 
                     long diffTime = (endTime - startTime);
                 }
-            })
+            });
         }
     }
 }
