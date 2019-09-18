@@ -25,5 +25,6 @@ public class SelectTargetActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }

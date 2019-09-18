@@ -16,7 +16,6 @@ public class IdentificationActivity extends AppCompatActivity {
 
         // 本人確認のシーンに遷移
         Button identificationButton = (Button)findViewById(R.id.identificationButton);
-
         identificationButton.setOnClickListener(new View.OnClickListener()
         {
             public  void onClick(View v)
@@ -25,6 +24,5 @@ public class IdentificationActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }
