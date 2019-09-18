@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SelectTargetActivity">
+    tools:context=".StatusPreviewActivity">
 
     <Button
-        android:id="@+id/targetButton"
-        android:layout_width="161dp"
-        android:layout_height="118dp"
+        android:id="@+id/statusPreviewButton"
+        android:layout_width="172dp"
+        android:layout_height="152dp"
         android:layout_marginStart="166dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="523dp"
         android:layout_marginEnd="157dp"
-        android:layout_marginBottom="183dp"
-        android:text="途中経過を表示する"
+        android:layout_marginBottom="160dp"
+        android:text="次の人に進む"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
