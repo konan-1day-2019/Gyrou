@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class StatusPreviewActivity extends AppCompatActivity {
 
-    int loopCount = 0;
+  static int loopCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,32 +21,17 @@ public class StatusPreviewActivity extends AppCompatActivity {
         // 夜
         // 生存者の数だけシーンをループする
         //if(loopCount < suvivorList.size())
-        {
-            Button statusPreviewButton = (Button) findViewById(R.id.statusPreviewButton);
+            Button statusPreviewButton = findViewById(R.id.statusPreviewButton);
 
             statusPreviewButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent intent = new Intent(StatusPreviewActivity.this, IdentificationActivity.class);
+                    Intent intent = new Intent(StatusPreviewActivity.this, IdentificateActivity.class);
                     startActivity(intent);
                 }
             });
-        }
+
         //else
         {
-            switch (IdentificationActivity.state)
-            {
-                case MORNING:
-                    IdentificationActivity.state = STATE.DAYTIME;
-                    break;
-
-                case DAYTIME:
-                    IdentificationActivity.state = STATE.NIGHT;
-                    break;
-                case NIGHT:
-                    IdentificationActivity.state = STATE.MORNING;
-                    break;
-            }
-
             loopCount = 0;
         }
 
@@ -58,7 +43,7 @@ public class StatusPreviewActivity extends AppCompatActivity {
 
             identificationButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Intent intent = new Intent(StatusPreviewActivity.this, IdentificationActivity.class);
+                    Intent intent = new Intent(StatusPreviewActivity.this, IdentificateActivity.class);
                     startActivity(intent);
                 }
             });

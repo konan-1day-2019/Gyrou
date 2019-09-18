@@ -24,9 +24,9 @@ public class peopleActivity extends AppCompatActivity {
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView num = (TextView)findViewById(R.id.num);
+                TextView ui = (TextView)findViewById(R.id.num);
                 if(n >= 4 && n < 8) n++;
-                num.setText(String.valueOf(n));
+                ui.setText(String.valueOf(n));
             }
         });
 
@@ -35,9 +35,9 @@ public class peopleActivity extends AppCompatActivity {
         minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView num = (TextView)findViewById(R.id.num);
+                TextView ui = (TextView)findViewById(R.id.num);
                 if(n > 4 && n <= 8) n--;
-                num.setText(String.valueOf(n));
+                ui.setText(String.valueOf(n));
             }
         });
 
@@ -45,7 +45,7 @@ public class peopleActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (peopleActivity.this,IdentificationActivity.class);
+                Intent intent = new Intent (peopleActivity.this, IdentificateActivity.class);
                 startActivity(intent);
             }
         });
