@@ -11,12 +11,19 @@ public abstract class Role {
     public  String getName(){
         return name;
     }
+    public  Role(){
+        isAlive=true;
+    }
+    public void setName(String s){
+        name=s;
+    }
 
     protected  String ActionExplanationText;//アクション前の説明
 
     protected  String ActionResultText;//アクション結果の表示
 
-    protected boolean isAlive;//生存しているかどうか
+    public boolean isAlive;//生存しているかどうか
+
     protected  int actionPower;//アクションを成功させるためのパワー
 
     protected float shakePower;//シェイクパワー.自身のアクションの成功率に加算する

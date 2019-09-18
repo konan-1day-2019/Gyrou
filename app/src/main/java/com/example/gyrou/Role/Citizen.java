@@ -2,10 +2,8 @@ package com.example.gyrou.Role;
 
 
 public class Citizen extends Role {
-    Citizen(String n){
-        name=n;
+    public Citizen(){
         roleName="市民";
-        isAlive=true;
         ActionExplanationText="-疑わしきは罰せよ-";
         ActionResultText="";
         actionPower=50;
