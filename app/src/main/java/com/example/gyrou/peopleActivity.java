@@ -16,7 +16,7 @@ public class peopleActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_peple);
+        setContentView(R.layout.activity_people);
         TextView num = (TextView)findViewById(R.id.num);
         num.setText(String.valueOf(n));
 
