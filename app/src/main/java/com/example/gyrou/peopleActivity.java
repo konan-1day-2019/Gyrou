@@ -2,6 +2,7 @@ package com.example.gyrou;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,21 +12,21 @@ import org.w3c.dom.Text;
 
 public class peopleActivity extends AppCompatActivity {
 
-    int x = 4;
+    int n = 4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_peple);
         TextView num = (TextView)findViewById(R.id.num);
-        num.setText(String.valueOf(x));
+        num.setText(String.valueOf(n));
 
         Button plus = (Button)findViewById(R.id.plusButton);
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 TextView num = (TextView)findViewById(R.id.num);
-                if(x >= 4 && x < 8) x++;
-                num.setText(String.valueOf(x));
+                if(n >= 4 && n < 8) n++;
+                num.setText(String.valueOf(n));
             }
         });
 
@@ -35,8 +36,17 @@ public class peopleActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 TextView num = (TextView)findViewById(R.id.num);
-                if(x > 4 && x <= 8) x--;
-                num.setText(String.valueOf(x));
+                if(n > 4 && n <= 8) n--;
+                num.setText(String.valueOf(n));
+            }
+        });
+
+        Button button = (Button)findViewById(R.id.ok_Button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (peopleActivity.this,IdentificationActivity.class);
+                startActivity(intent);
             }
         });
 
